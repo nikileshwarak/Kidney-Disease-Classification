@@ -1,3 +1,18 @@
+Metadata-Version: 2.4
+Name: cnnClassifier
+Version: 0.0.0
+Summary: A small python package for CNN app
+Home-page: https://github.com/nikileshwarak/Kidney-Disease-Classification
+Author: nikileshwarak
+Author-email: nikileshwarak@gmail.com
+Project-URL: Bug Tracker, https://github.com/nikileshwarak/Kidney-Disease-Classification/issues
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
 # Kidney-Disease-Classification
 A deep learning project that classifies and identifies kidney tumours. 
 

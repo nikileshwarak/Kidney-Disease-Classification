@@ -1,0 +1,19 @@
+tensorflow==2.12.0  
+pandas
+dvc #version datasets/models
+mlflow==2.2.2 #track experiments & models
+notebook
+numpy
+matplotlib
+seaborn
+python-box==6.0.2
+pyYAML #read configs
+tqdm #progress bars
+ensure==1.0.2
+joblib
+types-PyYAML
+scipy
+Flask
+Flask-Cors
+gdown #read data from g-drive
+-e . #project becomes a package that you can import anywhere.
