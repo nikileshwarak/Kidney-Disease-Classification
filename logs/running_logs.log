@@ -1,1 +1,27 @@
 [2025-08-24 11:10:38,700: INFO: main: Welcome to the custom log]
+[2025-08-27 14:38:07,088: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-27 14:38:07,110: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-27 14:38:07,128: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-27 14:38:07,128: INFO: common: created directory at: artifacts]
+[2025-08-27 14:38:07,132: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-27 14:38:07,133: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "C:\Users\aknik\Documents\Data Science\Projects\DS Projects\Kidney_Tumour_classification\Kidney-Disease-Classification\main.py", line 8, in <module>
+    data_ingestion.main()
+  File "c:\users\aknik\documents\data science\projects\ds projects\kidney_tumour_classification\kidney-disease-classification\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 18, in main
+    data_ingestion.extract_zip_file()
+  File "c:\users\aknik\documents\data science\projects\ds projects\kidney_tumour_classification\kidney-disease-classification\src\cnnClassifier\components\data_ingestion.py", line 46, in extract_zip_file
+    with py7zr.SevenZipFile(self.config.local_data_file, mode='r') as archive:
+  File "C:\Users\aknik\.conda\envs\kidney\lib\site-packages\py7zr\py7zr.py", line 372, in __init__
+    self.fp = open(file, filemode)  # type: ignore
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2025-08-27 14:39:11,401: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-27 14:39:11,405: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-27 14:39:11,405: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-27 14:39:11,405: INFO: common: created directory at: artifacts]
+[2025-08-27 14:39:11,405: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-27 14:39:11,405: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/17Qu_FWTD7pQxmfZJQJ-bErw2XKRbDpPG/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-27 14:43:19,933: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/17Qu_FWTD7pQxmfZJQJ-bErw2XKRbDpPG/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-27 15:44:38,672: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
