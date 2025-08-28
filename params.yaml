@@ -2,7 +2,7 @@ AUGMENTATION: True # data augmentation (random flips, rotations, shifts, zoom, b
 IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model
 BATCH_SIZE: 16
 INCLUDE_TOP: False # removing those final layers and keeping only the feature extractor (convolutional part)
-EPOCHS: 1
+EPOCHS: 1 #200 300
 CLASSES: 2 #binary classification.
 WEIGHTS: imagenet #using transfer learning → load pretrained weights from ImageNet. Instead of training from scratch, the model already knows low-level features (edges, textures, shapes).
 LEARNING_RATE: 0.01 
