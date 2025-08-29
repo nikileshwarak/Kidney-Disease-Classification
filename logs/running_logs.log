@@ -626,3 +626,74 @@ x==========x]
 [2025-08-29 21:19:43,669: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
 
 x==========x]
+[2025-08-29 21:49:21,458: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-08-29 21:49:21,458: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-29 21:49:21,465: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-29 21:49:21,465: INFO: common: created directory at: artifacts]
+[2025-08-29 21:49:21,467: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-08-29 21:49:21,467: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1fSDpirTdolE8CJ-377owpB73eAizcG5U/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-29 21:50:11,898: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1fSDpirTdolE8CJ-377owpB73eAizcG5U/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-08-29 21:50:30,292: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-08-29 21:50:42,266: INFO: stage_02_prepare_base_model: *******************]
+[2025-08-29 21:50:42,266: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model started <<<<<<]
+[2025-08-29 21:50:42,271: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-29 21:50:42,277: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-29 21:50:42,277: INFO: common: created directory at: artifacts]
+[2025-08-29 21:50:42,279: INFO: common: created directory at: artifacts/prepare_base_model]
+[2025-08-29 21:50:43,459: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2025-08-29 21:50:43,960: INFO: stage_02_prepare_base_model: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2025-08-29 21:50:53,647: INFO: stage_03_model_training: *******************]
+[2025-08-29 21:50:53,648: INFO: stage_03_model_training: >>>>>> stage Training started <<<<<<]
+[2025-08-29 21:50:53,652: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-29 21:50:53,657: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-29 21:50:53,660: INFO: common: created directory at: artifacts]
+[2025-08-29 21:50:53,660: INFO: common: created directory at: artifacts\training]
+[2025-08-29 21:53:57,113: INFO: stage_03_model_training: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2025-08-29 21:54:13,033: INFO: stage_04_model_evaluation: *******************]
+[2025-08-29 21:54:13,033: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage started <<<<<<]
+[2025-08-29 21:54:13,038: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-08-29 21:54:13,045: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-08-29 21:54:13,050: INFO: common: created directory at: artifacts]
+[2025-08-29 21:54:43,053: INFO: common: json file saved at: scores.json]
+[2025-08-29 21:54:43,063: INFO: common: json file saved at: scores.json]
+[2025-08-29 21:54:43,063: INFO: stage_04_model_evaluation: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2025-08-29 22:34:48,379: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.29.93:8080]
+[2025-08-29 22:34:48,381: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-08-29 22:35:19,593: INFO: _internal: 127.0.0.1 - - [29/Aug/2025 22:35:19] "GET / HTTP/1.1" 200 -]
+[2025-08-29 22:35:42,742: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "C:\Users\aknik\.conda\envs\kidney\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\aknik\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\aknik\.conda\envs\kidney\lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\aknik\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\aknik\.conda\envs\kidney\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\aknik\.conda\envs\kidney\lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\aknik\Documents\Data Science\Projects\DS Projects\Kidney_Tumour_classification\Kidney-Disease-Classification\app.py", line 44, in predictRoute
+    result = clApp.classifier.predict()
+  File "c:\users\aknik\documents\data science\projects\ds projects\kidney_tumour_classification\kidney-disease-classification\src\cnnClassifier\pipeline\prediction.py", line 16, in predict
+    model = load_model(os.path.join("model", "model.h5"))
+  File "C:\Users\aknik\.conda\envs\kidney\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "C:\Users\aknik\.conda\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\aknik\.conda\envs\kidney\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at model\model.h5
+[2025-08-29 22:35:42,749: INFO: _internal: 127.0.0.1 - - [29/Aug/2025 22:35:42] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
